@@ -1,0 +1,22 @@
+*VOOS*
+1) Cadastro de voo -> id_voo, city_ori, city_des, scale_num, pass_price,
+qtd_lug_disp, passageiros_do_voo(array), plane_status    
+2) Listagem de voos (específica) -> cidade destino, cidade de origem, menor escala
+
+
+cidade destino|origem|menor -> voos[] -> origem ->   "ID do Voo":id_voo,
+                                                     "Cidade de Origem":city_origem,
+                                                     "Cidade Destino":city_destino,
+                                                     "Número de Escalas":n_escalas,
+                                                     "Preço":preco,
+                                                     "Quantidade de Lugares":qtd_lugares,
+
+*PASSAGEIROS*
+1) Cadastro cliente -> Cpf(id), name, phone, buy_status, voos(array)
+
+
+
+*FUNÇÕES GERAIS*
+
+1) Compra de passegem -> requeriment (id_voo -> plane_list && client_cpf) -> client buy_status += (qtd_de_passagens) || client voos.append (id_voo) && voos qtd_lug_disp -= (x) || passageiros_do_voo.append (cpf) 
+
