@@ -5,12 +5,17 @@ import os
 
 os.system("cls")
 num = int(input("Digite a quantidade de clientes que deseja adicioanar: "))
+
 insert_client(num)
+
+filtro = input("Digite o nome que procura: ")
 
 i = 0 
 
+
+
 while i < len(clientes):
-    if clientes[i]["cpf"] == "1":
+    if clientes[i]["nome"] == filtro:
         print("CPF:", clientes[i]["cpf"])
         print("Nome:", clientes[i]["nome"])
         print("Telefone:", clientes[i]["telefone"])
