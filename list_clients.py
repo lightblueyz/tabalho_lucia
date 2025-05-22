@@ -1,7 +1,20 @@
 from insert_clients import clientes
 from insert_clients import insert_client
+import os 
 
 
-insert_client() 
-if clientes[0][1] == "porra":
-    print (clientes[0][1])
+os.system("cls")
+num = int(input("Digite a quantidade de clientes que deseja adicioanar: "))
+insert_client(num)
+
+i = 0 
+
+while i < len(clientes):
+    if clientes[i]["cpf"] == "1":
+        print("CPF:", clientes[i]["cpf"])
+        print("Nome:", clientes[i]["nome"])
+        print("Telefone:", clientes[i]["telefone"])
+        print("Qtd de compras:", clientes[i]["qtd_compras"])
+        print("Voos:", clientes[i]["voos"])
+        print("-" * 50)  
+    i += 1

@@ -1,27 +1,24 @@
-
 clientes = []
-def insert_client():     
-    
-    import os
-    
+import os
+
+def insert_client(num):     
 
     i = 0
-    while i < 3:
+    os.system("cls")
+
+    while i != num:
+
         os.system("cls")
         cpf = ""
         name = ""
         phone = ""
         qtd_passagens = 0 
-        voo = ""
         voos = []
 
-
-
-        cpf = input(":")
-        name = input(":")
-        phone = input(":")
-        qtd_passagens= int(input(":"))
-    
+        cpf = input("Digite o cpf:")
+        name = input("Digite o nome:")
+        phone = input("Digite o telefone(com DDD):")
+        os.system("cls")
 
         cliente = {
                 "cpf": cpf,
@@ -31,12 +28,5 @@ def insert_client():
                 "voos": voos
             }
         clientes.append(cliente)
-        os.system("cls")
         i+= 1
         
-        
-        
-     
-
-insert_client()
-print (clientes)   
