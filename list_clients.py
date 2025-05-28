@@ -1,5 +1,5 @@
-from clients_functions.insert_clients import clientes
-from clients_functions.insert_clients import insert_client
+from insert_clients import clientes
+from insert_clients import insert_client
 import os 
 
 def list_client():

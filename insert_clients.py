@@ -7,7 +7,7 @@ def insert_client(num):
     os.system("cls")
 
     while i != num:
-
+         
         os.system("cls")
         cpf = ""
         name = ""

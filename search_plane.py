@@ -1,4 +1,4 @@
-from plane_functions.insert_planes import voos
+from insert_planes import voos
 import os
 
 

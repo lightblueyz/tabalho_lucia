@@ -1,18 +1,12 @@
-from clients_functions.insert_clients import clientes 
-from plane_functions.insert_planes import voos
-from clients_functions.insert_clients import insert_client
-from plane_functions.insert_planes import insert_plane
+from insert_clients import clientes 
+from insert_planes import voos
+from insert_clients import insert_client
+from insert_planes import insert_plane
 import os
 os.system("cls")
-num_c = int(input("Digite a quantidade de clientes que deseja adicioanar: "))
 
 
-insert_client(num_c)
-insert_plane()
-
-
-
-def buy_pass(): 
+def buy_pass(voos): 
     os.system("cls")
 
     i = 0
@@ -58,9 +52,4 @@ def buy_pass():
     
 
     
-         
-        
-
-    
-    
-buy_pass()        
+     

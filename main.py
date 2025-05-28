@@ -1,18 +1,21 @@
-from plane_functions.search_plane import planes_list
-from plane_functions.insert_planes import insert_plane
-
+from search_plane import planes_list
+from insert_planes import insert_plane
+from insert_clients import insert_client
+from buy_pass import buy_pass
+from insert_planes import voos
+import os 
 
 i = 0
 
 while i < 1:
     print("-" * 50)
-    print("BEM-VINDO AO MENU DA AGÊNCIA AVIÁRIA")
+    print("BEM-VINDO AO MENU DA AGÊNCIA Preventi filho da puta")  
     print("1 - Cadastrar um Voo")
-    print("2 - Consultar um Voo (EM DESENVOLVIMENTO)")
-    print("3 - Informar o Voo com menor Escala")
+    print("2 - Consultar um Voo")
+    print("3 - Cadastro de clientes")
     print("4 - Listar os Passageiros de um Voo")
     print("5 - Venda de Passagem")
-    print("6 - Cancelamento de Passagem (EM DESENVOLVIMENTO)")
+    print("6 - Cancelamento de Passagem")
     print("0 - Sair")
     print("-" * 50)
     entrada = input("Digite a opção que deseja: ")
@@ -24,15 +27,19 @@ while i < 1:
             print("Encerrando o sistema. Até logo!")
             break
         elif opcao == 1:
-            insert_plane()
+            os.system("cls")
+            num_p = int(input("Digite a quantidade de voos que deseja adicioanar: "))
+            insert_plane(num_p)
         elif opcao == 2:
             planes_list()
         elif opcao == 3:
-            print("Opção 3 ainda em desenvolvimento.")
+            os.system("cls")
+            num_c = int(input("Digite a quantidade de clientes que deseja adicioanar: "))
+            insert_client(num_c)
         elif opcao == 4:
             print("Opção 4 ainda em desenvolvimento.")
         elif opcao == 5:
-            print("Opção 5 ainda em desenvolvimento.")
+            buy_pass(voos)
         elif opcao == 6:
             print("Opção 6 ainda em desenvolvimento.")
         else:
