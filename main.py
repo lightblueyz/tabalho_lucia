@@ -1,13 +1,10 @@
-from search_plane import planes_list
-from buy_pass import buy_pass
-from insert_clients import insert_client
-from list_clients import list_client
-from insert_planes import insert_plane
+from plane_functions.search_plane import planes_list
+from plane_functions.insert_planes import insert_plane
 
- 
 
-# MENU
-while True:
+i = 0
+
+while i < 1:
     print("-" * 50)
     print("BEM-VINDO AO MENU DA AGÊNCIA AVIÁRIA")
     print("1 - Cadastrar um Voo")
@@ -27,15 +24,15 @@ while True:
             print("Encerrando o sistema. Até logo!")
             break
         elif opcao == 1:
-            insert_plane()  
+            insert_plane()
         elif opcao == 2:
-            print("Opção 2 ainda em desenvolvimento.")
-        elif opcao == 3:
             planes_list()
+        elif opcao == 3:
+            print("Opção 3 ainda em desenvolvimento.")
         elif opcao == 4:
-            list_client()
+            print("Opção 4 ainda em desenvolvimento.")
         elif opcao == 5:
-            buy_pass()
+            print("Opção 5 ainda em desenvolvimento.")
         elif opcao == 6:
             print("Opção 6 ainda em desenvolvimento.")
         else:

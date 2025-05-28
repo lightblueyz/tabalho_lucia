@@ -1,9 +1,9 @@
-from insert_clients import clientes 
-from insert_planes import voos
-from insert_clients import insert_client
-from insert_planes import insert_plane
+from clients_functions.insert_clients import clientes 
+from plane_functions.insert_planes import voos
+from clients_functions.insert_clients import insert_client
+from plane_functions.insert_planes import insert_plane
 import os
-
+os.system("cls")
 num_c = int(input("Digite a quantidade de clientes que deseja adicioanar: "))
 
 
@@ -20,6 +20,7 @@ def buy_pass():
 
 
     search_voo = int(input("Digite o número do voo: "))
+    
     while j < len(voos):
         plane_verify = 0 
         if voos[j]["plane_id"] == search_voo:

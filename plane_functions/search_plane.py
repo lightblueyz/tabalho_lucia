@@ -1,24 +1,25 @@
-from insert_planes import voos
-from insert_planes import insert_plane
+from plane_functions.insert_planes import voos
 import os
 
 
-insert_plane()
+
+
 def planes_list():
+    
     os.system("cls")
     print('-'*50)
     print('1-Cidade de Origem')
     print('2-Cidade Destino')
     print('3-Voo com menos escalas')
-    listagem=input('Escolha a opção que deseja procurar:')
+    listagem = input('Escolha a opção que deseja procurar:')
 
     os.system("cls")
 
-    if listagem=='1':
+    if listagem == '1':
         escolhaorigem=input('Defina a cidade de origem:')
         os.system("cls")
         i=0
-        while i<len(voos):
+        while i < len(voos):
             if voos[i]["city_origem"] == escolhaorigem:
                 print("ID do VOO:", voos[i]["plane_id"])
                 print("Cidade de Origem:", voos[i]["city_origem"])
@@ -35,8 +36,8 @@ def planes_list():
         escolhadestino=input('Defina o seu destino:')
         os.system("cls")
         i = 0
-        while i<len(voos):
-            if voos[i]["city_destino"]== escolhadestino:
+        while i < len(voos):
+            if voos[i]["city_destino" ]== escolhadestino:
                 print("ID do VOO:", voos[i]["plane_id"])
                 print("Cidade de Origem:", voos[i]["city_origem"])
                 print("Cidade Destino", voos[i]["city_destino"])
@@ -50,7 +51,7 @@ def planes_list():
         menorescala=input("Quantas escalas deseja:")
         os.system("cls")
         i = 0
-        while i<len(voos):
+        while i < len(voos):
             if voos[i]["n_escalas"] == menorescala:
                 print("ID do VOO:", voos[i]["plane_id"])
                 print("Cidade de Origem:", voos[i]["city_origem"])
@@ -61,6 +62,7 @@ def planes_list():
                 print("Passageiros:", voos[i]["passageiros"])
                 print("-" * 50)  
             i += 1
-    else:
-        print("Opção Inválida")
-planes_list()        
+        else:
+            print("Opção Inválida")
+
+     

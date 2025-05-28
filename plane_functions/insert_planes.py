@@ -5,9 +5,8 @@ def insert_plane():
     import random
     import os
 
-    os.system("cls")  # ou "clear" se estiver no Linux/Mac
+    os.system("cls")  
     id_voo = random.randrange(10, 99)
-    print(id_voo)
 
     city_origem = input("Digite a cidade de origem: ")
     city_destino = input("Digite seu destino: ")
@@ -27,5 +26,7 @@ def insert_plane():
         "plane_status": plane_status,
         "passageiros": passageiros,
     }
-
+    
     voos.append(voo)
+    print("Voo Cadastrado!")
+
