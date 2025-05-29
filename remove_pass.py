@@ -1,10 +1,8 @@
 from insert_clients import clientes 
 from insert_planes import voos
 import os
-os.system("cls")
 
-
-def buy_pass():
+def remove_pass(): 
     import os
 
     os.system("cls")
@@ -56,15 +54,12 @@ def buy_pass():
 
     qtd = int(input("Digite a quantidade de passagens: "))
 
-    if qtd > voos[j]["qtd_lugares"]:
-        print("Quantidade de lugares indesponíveis!")
-    else:    
-        clientes[i]["voos"].append(id_plane)
-        clientes[i]["qtd_compras"] += qtd
-        voos[j]["passageiros"].append(search_cpf)
-        voos[j]["qtd_lugares"] -= qtd
-        print("Passagens Compradas!")
-        if voos[j]["qtd_lugares"] == 0:
-            voos[j]["plane_status"] = "Indisponível"
-        else:
-            voos[j]["plane_status"] = "Disponível"
+    clientes[i]["voos"].remove(id_plane)
+    clientes[i]["qtd_compras"] -= qtd
+    voos[j]["passageiros"].remove(search_cpf)
+    voos[j]["qtd_lugares"] += qtd
+    print("Passagens Compradas!")
+    if voos[j]["qtd_lugares"] == 0:
+        voos[j]["plane_status"] = "Indisponível"
+    else:
+        voos[j]["plane_status"] = "Disponível"

@@ -12,9 +12,9 @@ def insert_plane(num_p):
         city_origem = input("Digite a cidade de origem: ")
         city_destino = input("Digite seu destino: ")
         n_escalas = int(input("Digite o número de escalas: "))
-        preco = input("Digite o valor: ")
-        qtd_lugares = input("Digite a quantidade de lugares: ")
-        plane_status = True
+        preco = float(input("Digite o valor: "))
+        qtd_lugares = int(input("Digite a quantidade de lugares: "))
+        plane_status = "Disponível"
         passageiros = []
 
         voo = {

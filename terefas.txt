@@ -20,3 +20,6 @@ cidade destino|origem|menor -> voos[] -> origem ->   "ID do Voo":id_voo,
 
 1) Compra de passegem -> requeriment (id_voo -> plane_list && client_cpf) -> client buy_status += (qtd_de_passagens) || client voos.append (id_voo) && voos qtd_lug_disp -= (x) || passageiros_do_voo.append (cpf) 
 
+
+
+1) id -> print 

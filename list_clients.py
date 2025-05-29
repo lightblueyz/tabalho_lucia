@@ -5,9 +5,6 @@ import os
 def list_client():
     os.system("cls")
     
-    num = int(input("Digite a quantidade de clientes que deseja adicioanar: "))
-
-    insert_client(num)
 
     filtro = input("Digite o nome que procura: ")
 
@@ -25,4 +22,4 @@ def list_client():
             print("-" * 50)  
         i += 1
 
-list_client()
+
