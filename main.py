@@ -2,7 +2,6 @@ from search_plane import planes_list
 from insert_planes import insert_plane
 from insert_clients import insert_client
 from buy_pass import buy_pass
-from insert_planes import voos
 from list_clients import list_client
 from list_planeclientes import list_planeclients
 from remove_pass import remove_pass
