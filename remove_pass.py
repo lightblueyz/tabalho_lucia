@@ -52,13 +52,14 @@ def remove_pass():
         print("Cliente não encontrado!")
         return
 
-    qtd = int(input("Digite a quantidade de passagens: "))
+    qtd = int(input("Digite a quantidade que deseja cancelar: "))
 
     clientes[i]["voos"].remove(id_plane)
     clientes[i]["qtd_compras"] -= qtd
     voos[j]["passageiros"].remove(search_cpf)
     voos[j]["qtd_lugares"] += qtd
-    print("Passagens Compradas!")
+    print("Passagens Canceladas!")
+    
     if voos[j]["qtd_lugares"] == 0:
         voos[j]["plane_status"] = "Indisponível"
     else:

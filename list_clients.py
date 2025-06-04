@@ -6,14 +6,14 @@ def list_client():
     os.system("cls")
     
 
-    filtro = input("Digite o nome que procura: ")
+    filtro = input("Digite o cpf que procura: ")
 
     i = 0 
 
 
 
     while i < len(clientes):
-        if clientes[i]["nome"] == filtro:
+        if clientes[i]["cpf"] == filtro:
             print("CPF:", clientes[i]["cpf"])
             print("Nome:", clientes[i]["nome"])
             print("Telefone:", clientes[i]["telefone"])
